@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan a trip — [Business name]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">[Business] <span>&amp; Co.</span></a>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="holidays.html">Holidays</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="enquire.html" class="nav-cta current">Plan a trip</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section style="padding-top: clamp(4rem, 9vw, 7rem);">
+    <div class="container">
+
+      <div class="form-wrap">
+        <div class="form-intro">
+          <span class="eyebrow">Tell us about you</span>
+          <h2>The brief.</h2>
+          <p style="color: var(--ink-soft); margin-top: 1rem;">Fill in what you know — leave anything you don't. We'll be in touch within two working days to start the conversation.</p>
+
+          <ul>
+            <li>No charge for the initial consultation</li>
+            <li>We'll reply within two working days</li>
+            <li>ABTA &amp; ATOL protected</li>
+            <li>Fifteen years of planning experience</li>
+          </ul>
+        </div>
+
+        <!--
+          IMPORTANT: Replace YOUR_FORM_ID below with the form ID from formspree.io
+          1. Sign up at formspree.io (free for 50 submissions/month)
+          2. Create a new form, copy the form endpoint
+          3. Paste it into the action="" attribute below
+        -->
+        <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="field">
+              <label for="departure">Departing from</label>
+              <input type="text" id="departure" name="departure" placeholder="e.g. London Heathrow">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field full">
+              <label for="destination">Destination(s)</label>
+              <input type="text" id="destination" name="destination" placeholder="e.g. Greek islands, or 'open to suggestions'">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="dates">Travel dates</label>
+              <input type="text" id="dates" name="dates" placeholder="e.g. last two weeks of July">
+            </div>
+            <div class="field">
+              <label for="duration">Trip length</label>
+              <select id="duration" name="duration">
+                <option value="">Select...</option>
+                <option>3–5 nights</option>
+                <option>6–9 nights</option>
+                <option>10–14 nights</option>
+                <option>15+ nights</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="people">Number of people</label>
+              <input type="number" id="people" name="people" min="1" placeholder="e.g. 4">
+            </div>
+            <div class="field">
+              <label for="ages">Ages</label>
+              <input type="text" id="ages" name="ages" placeholder="e.g. 2 adults, kids 6 &amp; 9">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field full">
+              <label for="budget">Approximate budget per person</label>
+              <select id="budget" name="budget">
+                <option value="">Select...</option>
+                <option>Under £1,000</option>
+                <option>£1,000 – £2,000</option>
+                <option>£2,000 – £3,500</option>
+                <option>£3,500 – £5,000</option>
+                <option>£5,000+</option>
+                <option>Prefer to discuss</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field full">
+              <label for="message">Anything else we should know?</label>
+              <textarea id="message" name="message" placeholder="Special occasions, dietary needs, mobility considerations, the type of pace you like, places you've already been..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-dark btn-arrow">Send enquiry</button>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">[Business] <span>&amp; Co.</span></div>
+        <p style="max-width: 36ch;">Bespoke holiday planning, run by [Mum's name], a qualified holiday planner with [X] years of experience.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="holidays.html">Featured holidays</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="enquire.html">Plan a trip</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@yourbusiness.co.uk">hello@yourbusiness.co.uk</a></li>
+          <li><a href="tel:+44">+44 [phone number]</a></li>
+          <li>Mon–Fri · 9am–6pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© [Year] [Business name]. All rights reserved.</span>
+      <span class="coords">50.9097° N, 1.4044° W</span>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('destination')) {
+      const map = { greece: 'Greek Islands', italy: 'Amalfi Coast', croatia: 'Dalmatian Coast', portugal: 'The Algarve' };
+      const dest = map[params.get('destination')] || params.get('destination');
+      document.getElementById('destination').value = dest;
+    }
+    if (params.get('package')) {
+      const map = { cyclades: 'The Cyclades, slowly', tuscany: 'A Tuscan villa week', dalmatia: 'The Dalmatian coast by sea', algarve: 'The quiet Algarve', norway: 'The fjords in autumn', morocco: 'Marrakech & the Atlas' };
+      document.getElementById('destination').value = map[params.get('package')] || '';
+    }
+  </script>
+
+</body>
+</html>

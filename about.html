@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — [Business name]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">[Business] <span>&amp; Co.</span></a>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="holidays.html">Holidays</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html" class="current">About</a></li>
+        <li><a href="enquire.html" class="nav-cta">Plan a trip</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section style="padding-top: clamp(4rem, 9vw, 7rem);">
+    <div class="container">
+      <div class="about-hero">
+
+        <div class="about-text">
+          <span class="eyebrow">About</span>
+          <h1>Holidays, planned by someone who's actually been there.</h1>
+          <p>[Mum's name] has been planning holidays for over [X] years, qualified through [the qualification — e.g. ABTA, IATA, the Travel Trust Association]. What started as planning trips for friends and family has grown by word of mouth into a small, careful business with clients across the UK.</p>
+          <p>The premise is simple: every itinerary is built from first principles around the person taking it. There's no template, no preferred-partner list to push, no upselling. If a hotel isn't right for you, it doesn't go in the brief.</p>
+          <p>The drone footage and on-the-ground photography started as a personal habit — checking that places actually look like the brochure. It turned out clients liked seeing it too.</p>
+        </div>
+
+        <div class="about-portrait">
+          <img src="images/portrait.jpg" alt="Portrait of the founder">
+        </div>
+
+      </div>
+
+      <div class="credentials">
+        <div class="credential">
+          <h4>Qualifications</h4>
+          <p>[Your qualification, e.g. ABTA certified]</p>
+        </div>
+        <div class="credential">
+          <h4>Experience</h4>
+          <p>[X] years in the industry</p>
+        </div>
+        <div class="credential">
+          <h4>Protection</h4>
+          <p>ABTA &amp; ATOL bonded</p>
+        </div>
+        <div class="credential">
+          <h4>Based in</h4>
+          <p>Southampton, UK</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>How we work.</h2>
+        <p>The process is short and the pace is yours. Most enquiries become bookings within two or three conversations.</p>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial reveal">
+          <blockquote>1 — You send a brief through the form. We have a free call to understand what you're really after.</blockquote>
+          <cite><strong>Step one</strong> · the conversation</cite>
+        </div>
+        <div class="testimonial reveal">
+          <blockquote>2 — Within a week, you get a written proposal with two or three options, costed, with images and a clear itinerary.</blockquote>
+          <cite><strong>Step two</strong> · the proposal</cite>
+        </div>
+        <div class="testimonial reveal">
+          <blockquote>3 — We refine it together, book it for you, and stay on hand for the duration. One person, one contact, start to finish.</blockquote>
+          <cite><strong>Step three</strong> · the trip</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-strip">
+    <div class="container reveal">
+      <h2>Ready to start the conversation?</h2>
+      <p>Send us a brief — even a vague one. The fastest way to find out if we're a fit.</p>
+      <a href="enquire.html" class="btn btn-primary btn-arrow">Plan your holiday</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">[Business] <span>&amp; Co.</span></div>
+        <p style="max-width: 36ch;">Bespoke holiday planning, run by [Mum's name], a qualified holiday planner with [X] years of experience.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="holidays.html">Featured holidays</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="enquire.html">Plan a trip</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@yourbusiness.co.uk">hello@yourbusiness.co.uk</a></li>
+          <li><a href="tel:+44">+44 [phone number]</a></li>
+          <li>Mon–Fri · 9am–6pm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© [Year] [Business name]. All rights reserved.</span>
+      <span class="coords">50.9097° N, 1.4044° W</span>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+
+</body>
+</html>
